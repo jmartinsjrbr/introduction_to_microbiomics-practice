@@ -26,6 +26,9 @@ wget https://www.dropbox.com/sh/kza1vomc5na5lo7/AADgdtGEnMww18PZMOHP-Pila?dl=0
 
 #### 2- Run metaWRAP-Read_qc to trim the reads and remove human contamination 
 ```
+#activate metawrap-env
+conda activate metawrap-env
+
 cd $ANALYSIS_FOLDER
 mkdir 1_READ_QC
 metawrap read_qc -1 $DATA_FOLDER/ERR011347_1.fastq -2 $DATA_FOLDER/ERR011347_2.fastq -t 8 -o READ_QC/ERR011347
