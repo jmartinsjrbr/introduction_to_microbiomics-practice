@@ -6,11 +6,9 @@ In this section you will find a guideline for each practice that will be offered
 ### Metagenomics: from reads to MAGs using metaWRAP pipeline
 In this hands on practice you will have the opportunity to learn all the steps involved in a standard metagenomics analysis, from pre-processing steps (read trimming, host read removal and reads taxonomic assignment) to Binning steps (Binning, binning refinement, bins reassemble, Bin quantification to address their abundance, Bin classification and functional annotation).
 
-As an example, we will use a reduced version of the metaHIT survey dataset available at .... with metawrap pipeline. (https://github.com/bxlab/metaWRAP)
+As an example, we will use a a public dataset from NCBI SRA (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420)
 
-![image](https://user-images.githubusercontent.com/11639261/141855861-4383c93f-40a0-4d66-bdaa-791b33fddaaf.png)
-(https://www.gutmicrobiotaforhealth.com/metahit/).
-
+![image](https://user-images.githubusercontent.com/11639261/142202653-eb035609-40d9-4430-8b95-29d4d8d73c61.png)
 
 To run the analysis you can simply run the following scripts inside the VM environmet you previously prepared as described in sections above.
 #### 1- Download raw data and move into *DATA_FOLDER* 
@@ -24,7 +22,7 @@ wget https://www.dropbox.com/sh/kza1vomc5na5lo7/AADgdtGEnMww18PZMOHP-Pila?dl=0
 
 ```
 
-#### 2- Run metaWRAP-Read_qc to trim the reads and remove human contamination 
+#### 2- Run metaWRAP-Read_qc to trim the reads and remove host contamination 
 ```
 ##metaWRAP pipeline
 #activate metawrap-env
