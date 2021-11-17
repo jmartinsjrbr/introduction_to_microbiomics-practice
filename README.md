@@ -17,8 +17,10 @@ To run the analysis you can simply run the following scripts inside the VM envir
 ```
 ANALYSIS_FOLDER=$HOME/omics_course/metaWRAP_analysis
 DATA_FOLDER=$HOME/omics_course/metaWRAP_data
+ASSEMBLY_FOLDER=$ANALYSIS_FOLDER/ASSEMBLY_SRR
 test -d $DATA_FOLDER || mkdir $DATA_FOLDER
 test -d $ANALYSIS_FOLDER || mkdir $ANALYSIS_FOLDER
+test -d $ASSEMBLY_FOLDER || mkdir $ASSEMBLY_FOLDER
 cd $DATA_FOLDER
 wget https://www.dropbox.com/sh/kza1vomc5na5lo7/AADgdtGEnMww18PZMOHP-Pila?dl=0
 
@@ -54,11 +56,31 @@ fastp -p --thread 8 --qualified_quality_phred 15 --length_required 40 --detect_a
 cat CLEAN_READS/srr*_1.CLEAN.fastq > CLEAN_READS/ALL_READS_1.fastq
 cat CLEAN_READS/srr*_2.CLEAN.fastq > CLEAN_READS/ALL_READS_2.fastq
 
-metawrap assembly -1 $CLEAN_READS/ALL_READS_1.fastq -2 $CLEAN_READS/ALL_READS_2.fastq -m 300 -t 16 --metaspades -o ASSEMBLY_srr
+#metawrap assembly -1 $CLEAN_READS/ALL_READS_1.fastq -2 $CLEAN_READS/ALL_READS_2.fastq -m 300 -t 16 --metaspades -o ASSEMBLY_srr
+```
+- **Download the final assembly file available at:** 
+```
+cd $ASSEMBLY_FOLDER
+wget  
 ```
 
 #### 4- Run metaWRAP-BINNING with metaspades 
+```
+###Binning###
+metawrap binning -o INITIAL_BINNING_srr -t 8 -a ASSEMBLY_srr/final_assembly.fasta \
+--metabat2 --maxbin2 --concoct $CLEAN_READS/ALL_READS_1.fastq $CLEAN_READS/ALL_READS_2.fastq
+```
 
+#### 5- Run metaWRAP-BINNING_REFINEMENT with metaspades 
+
+```
+```
+
+
+#### 6- Run metaWRAP-BINNING_REFINEMENT with metaspades 
+
+```
+```
 ### Metatranscriptomics: Metatranscriptome analysis using Sequence Annotation (SAMSA2) Pipeline 
 
   
