@@ -26,19 +26,38 @@ wget https://www.dropbox.com/sh/kza1vomc5na5lo7/AADgdtGEnMww18PZMOHP-Pila?dl=0
 
 #### 2- Run metaWRAP-Read_qc to trim the reads and remove human contamination 
 ```
+##metaWRAP pipeline
 #activate metawrap-env
-conda activate metawrap-env
+#conda activate metawrap-env
 
 cd $ANALYSIS_FOLDER
-mkdir 1_READ_QC
-metawrap read_qc -1 $DATA_FOLDER/ERR011347_1.fastq -2 $DATA_FOLDER/ERR011347_2.fastq -t 8 -o READ_QC/ERR011347
-metawrap read_qc -1 $DATA_FOLDER/ERR011348_1.fastq -2 $DATA_FOLDER/ERR011348_2.fastq -t 8 -o READ_QC/ERR011348
-metawrap read_qc -1 $DATA_FOLDER/ERR011349_1.fastq -2 $DATA_FOLDER/ERR011349_2.fastq -t 8 -o READ_QC/ERR011349
+#mkdir 1_READ_QC
+#metawrap read_qc -1 $DATA_FOLDER/ERR011347_1.fastq -2 $DATA_FOLDER/ERR011347_2.fastq -t 8 -o READ_QC/ERR011347
+#metawrap read_qc -1 $DATA_FOLDER/ERR011348_1.fastq -2 $DATA_FOLDER/ERR011348_2.fastq -t 8 -o READ_QC/ERR011348
+#metawrap read_qc -1 $DATA_FOLDER/ERR011349_1.fastq -2 $DATA_FOLDER/ERR011349_2.fastq -t 8 -o READ_QC/ERR011349
+
+
+##Alternatively, we will run fastp for practice purposes
+CLEAN_READS=$ANALYSIS_FOLDER/1_FASTP
+test -d $CLEAN_READS || mkdir $CLEAN_READS
+
+fastp -p --thread 8 --qualified_quality_phred 15 --length_required 40 --detect_adapter_for_pe --reads_to_process 0 --low_complexity_filter --complexity_threshold 15 --report_title $CLEAN_READS/srr_report --json $CLEAN_READS/srr_fastp.json --html $CLEAN_READS/srr_fastp.html \
+--in1 $DATA_FOLDER/srr16888420_1.fastq --in2 $DATA_FOLDER/srr16888420_2.fastq --out1 $CLEAN_READS/srr16888420_1.CLEAN.fastq \
+--out2 $CLEAN_READS/srr16888420_2.CLEAN.fastq --unpaired1 $CLEAN_READS/srr16888420_1.CLEAN_unpaired.fastq \
+--unpaired2 $CLEAN_READS/srr16888420_2.CLEAN_unpaired.fastq
 
 ```
 
-#### 3- Run metaWRAP-Read_qc to trim the reads and remove human contamination 
+#### 3- Run metaWRAP-ASSEMBLY with metaspades 
+** WILL NOT BE RUN DURING DEMONSTRATION DUE TO HIGH COMPUTATIONAL COST FOR VM **
+```
+cat CLEAN_READS/srr*_1.CLEAN.fastq > CLEAN_READS/ALL_READS_1.fastq
+cat CLEAN_READS/srr*_2.CLEAN.fastq > CLEAN_READS/ALL_READS_2.fastq
 
+metawrap assembly -1 $CLEAN_READS/ALL_READS_1.fastq -2 $CLEAN_READS/ALL_READS_2.fastq -m 300 -t 16 --metaspades -o ASSEMBLY_srr
+```
+
+#### 4- Run metaWRAP-BINNING with metaspades 
 
 ### Metatranscriptomics: Metatranscriptome analysis using Sequence Annotation (SAMSA2) Pipeline 
 
