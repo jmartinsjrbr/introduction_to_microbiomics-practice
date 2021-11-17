@@ -21,14 +21,18 @@ ASSEMBLY_FOLDER=$ANALYSIS_FOLDER/ASSEMBLY_SRR
 test -d $DATA_FOLDER || mkdir $DATA_FOLDER
 test -d $ANALYSIS_FOLDER || mkdir $ANALYSIS_FOLDER
 test -d $ASSEMBLY_FOLDER || mkdir $ASSEMBLY_FOLDER
-cd $DATA_FOLDER
-wget https://www.dropbox.com/sh/kza1vomc5na5lo7/AADgdtGEnMww18PZMOHP-Pila?dl=0
 
+cd $DATA_FOLDER 
 ```
+- Download fastq files to *$HOME/omics_course/metaWRAP_data* you have created in the steps above, by clinking in the links below:
+  - https://filesender.rnp.br/download.php?token=b6fe375e-af11-4eb0-a76b-6bcd96c1f1b6&files_ids=114205 
+  - https://filesender.rnp.br/download.php?token=b6fe375e-af11-4eb0-a76b-6bcd96c1f1b6&files_ids=114204
+  
 
 #### 2- Run metaWRAP-Read_qc to trim the reads and remove host contamination 
 ```
 ##metaWRAP pipeline
+#eval "$(conda shell.bash hook)"
 #activate metawrap-env
 #conda activate metawrap-env
 
@@ -48,6 +52,12 @@ fastp -p --thread 8 --qualified_quality_phred 15 --length_required 40 --detect_a
 --out2 $CLEAN_READS/srr16888420_2.CLEAN.fastq --unpaired1 $CLEAN_READS/srr16888420_1.CLEAN_unpaired.fastq \
 --unpaired2 $CLEAN_READS/srr16888420_2.CLEAN_unpaired.fastq
 
+##Quality repot by multiqc
+eval "$(conda shell.bash hook)"
+conda activate omics_course
+cd $CLEAN_READS
+multiqc . -o ./multiqc_report
+
 ```
 
 #### 3- Run metaWRAP-ASSEMBLY with metaspades 
@@ -61,29 +71,76 @@ cat CLEAN_READS/srr*_2.CLEAN.fastq > CLEAN_READS/ALL_READS_2.fastq
 - **Download the final assembly file available at:** 
 ```
 cd $ASSEMBLY_FOLDER
-wget  
+wget https://github.com/jmartinsjrbr/introduction_to_microbiomics-practice/blob/main/final_assembly.fasta.gz
+gunzip *.gz
+
 ```
 
-#### 4- Run metaWRAP-BINNING with metaspades 
+#### 4- Run metaWRAP-BINNING combining metabat2, maxbin2 and concoct 
 ```
+conda deactivate
+
+#activate metawrap-env
+conda activate metawrap-env
+
 ###Binning###
-metawrap binning -o INITIAL_BINNING_srr -t 8 -a ASSEMBLY_srr/final_assembly.fasta \
+metawrap binning -o INITIAL_BINNING_srr -t 8 -a $ASSEMBLY_FOLDER/final_assembly.fasta \
 --metabat2 --maxbin2 --concoct $CLEAN_READS/ALL_READS_1.fastq $CLEAN_READS/ALL_READS_2.fastq
 ```
 
-#### 5- Run metaWRAP-BINNING_REFINEMENT with metaspades 
+#### 5- Run metaWRAP-BINNING_REFINEMENT 
 
 ```
+#metawrap bin_refinement -o BIN_REFINEMENT_srr -t 8 -A INITIAL_BINNING_srr/metabat2_bins/ -B INITIAL_BINNING_srr/maxbin2_bins/ -C INITIAL_BINNING_srr/concoct_bins/ -c 50 -x 15
 ```
 
-
-#### 6- Run metaWRAP-BINNING_REFINEMENT with metaspades 
+#### 6- Run metaWRAP-REASSEMBLE_BINS
 
 ```
+#metawrap reassemble_bins -o BIN_REASSEMBLY_srr -1 $CLEAN_READS/ALL_READS_1.fastq -2 $CLEAN_READS/ALL_READS_2.fastq -t 8 \
+-m 300 -c 50 -x 15 -b BIN_REFINEMENT_srr/metawrap_50_15_bins
+
 ```
+
+- **Download final bins**
+``` 
+#download final bins
+cd $ANALYSIS_FOLDER
+mkdir bins_consolidated
+cd bins_consolidated
+
+wget https://github.com/jmartinsjrbr/introduction_to_microbiomics-practice/blob/main/bin.1.permissive.fa.gz
+gunzip *.gz
+
+get https://github.com/jmartinsjrbr/introduction_to_microbiomics-practice/blob/main/binning_demo.tar.gz
+tar -vzxf *.gz
+rm *.gz
+cd ..
+```
+#### 7- Run GTDBT to assign taxonomy to bins/MAGs
+```
+#gtdbtk classify_wf --genome_dir bins_consolidated --out_dir gtdbtk_out --prefix omics_course.gtdbtk --cpus 10 --pplacer_cpus 1 --extension fa
+```
+
+#### 8- Run PROKKA to assing annotation to MAGs
+```
+conda deactivate
+conda activate prokka
+for f in $(ls bins_consolidated/*.fa) 
+do
+  prokka --quiet --cpus 8 --outdir $(basename $f ".fa")_out --prefix $(basename $INFILE ".fa") --addgenes --addmrna --kingdom 'Bacteria' $INFILE
+
+done;
+ 
+```
+
+#### 9- Run dbcan to CAZyme prediction
+```
+
+```
+
 ### Metatranscriptomics: Metatranscriptome analysis using Sequence Annotation (SAMSA2) Pipeline 
 
-  
  
 ##![image](https://user-images.githubusercontent.com/11639261/141863319-65a37b17-11a6-4573-a229-d24b0d511537.png)
 
