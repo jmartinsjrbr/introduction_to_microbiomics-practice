@@ -61,7 +61,7 @@ multiqc . -o ./multiqc_report
 ```
 
 #### 3- Run metaWRAP-ASSEMBLY with metaspades 
-** WILL NOT BE RUN DURING DEMONSTRATION DUE TO HIGH COMPUTATIONAL COST FOR VM **
+**WILL NOT BE RUN DURING DEMONSTRATION DUE TO HIGH COMPUTATIONAL COST FOR VM**
 ```
 cat CLEAN_READS/srr*_1.CLEAN.fastq > CLEAN_READS/ALL_READS_1.fastq
 cat CLEAN_READS/srr*_2.CLEAN.fastq > CLEAN_READS/ALL_READS_2.fastq
@@ -89,12 +89,14 @@ metawrap binning -o INITIAL_BINNING_srr -t 8 -a $ASSEMBLY_FOLDER/final_assembly.
 ```
 
 #### 5- Run metaWRAP-BINNING_REFINEMENT 
+**WILL NOT BE RUN DURING DEMONSTRATION DUE TO HIGH COMPUTATIONAL COST FOR VM**
 
 ```
 #metawrap bin_refinement -o BIN_REFINEMENT_srr -t 8 -A INITIAL_BINNING_srr/metabat2_bins/ -B INITIAL_BINNING_srr/maxbin2_bins/ -C INITIAL_BINNING_srr/concoct_bins/ -c 50 -x 15
 ```
 
 #### 6- Run metaWRAP-REASSEMBLE_BINS
+**WILL NOT BE RUN DURING DEMONSTRATION DUE TO HIGH COMPUTATIONAL COST FOR VM**
 
 ```
 #metawrap reassemble_bins -o BIN_REASSEMBLY_srr -1 $CLEAN_READS/ALL_READS_1.fastq -2 $CLEAN_READS/ALL_READS_2.fastq -t 8 \
