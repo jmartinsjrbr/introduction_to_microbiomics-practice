@@ -61,7 +61,9 @@ metawrap assembly -1 $CLEAN_READS/ALL_READS_1.fastq -2 $CLEAN_READS/ALL_READS_2.
 
 ### Metatranscriptomics: Metatranscriptome analysis using Sequence Annotation (SAMSA2) Pipeline 
 
-![image](https://user-images.githubusercontent.com/11639261/141863319-65a37b17-11a6-4573-a229-d24b0d511537.png)
+  
+ 
+##![image](https://user-images.githubusercontent.com/11639261/141863319-65a37b17-11a6-4573-a229-d24b0d511537.png)
 
 #### Example Files and Workflow 
 For this practical demonstration we are going to use sample files provided with SAMSA 2. These files can be found in the folder: *~/omics_course/progs/samsa2/sample_files_paired-end/1_starting_files*
