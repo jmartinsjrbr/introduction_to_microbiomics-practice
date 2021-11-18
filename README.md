@@ -130,7 +130,7 @@ conda deactivate
 conda activate prokka
 for f in $(ls bins_consolidated/*.fa) 
 do
-  prokka --quiet --cpus 8 --outdir $(basename $f ".fa")_out --prefix $(basename $INFILE ".fa") --addgenes --addmrna --kingdom 'Bacteria' $INFILE
+  prokka --quiet --cpus 8 --outdir $(basename $f ".fa")_prokka_out --prefix $(basename $INFILE ".fa") --addgenes --addmrna --kingdom 'Bacteria' $INFILE
 
 done;
  
@@ -138,8 +138,19 @@ done;
 
 #### 9- Run dbcan to CAZyme prediction
 ```
+conda deactivate
+conda activate run_dbcan
+ 
+DB_DIR=/home/bioinformatica/omics_course/db
+
+for f in $(ls *_prokka_out/*.faa);do
+         run_dbcan.py $f protein --out_dir $(basename $f ".faa")_out --hmm_cpu 8 --tools hmmer --db_dir $DB_DIR --out_pre $(basename $f ".faa")_ --gram all
+ 
+done
 
 ```
+
+
 
 ### Metatranscriptomics: Metatranscriptome analysis using Sequence Annotation (SAMSA2) Pipeline 
 
