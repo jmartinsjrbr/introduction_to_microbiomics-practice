@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+fastp	all_sections	err011347_fastp	/home/joaquim.junior/work/omics_course/analysis/CLEAN_READS_err_fastp/err011347_fastp.json
+fastp	all_sections	err011348_fastp	/home/joaquim.junior/work/omics_course/analysis/CLEAN_READS_err_fastp/err011348_fastp.json
+fastp	all_sections	err011349_fastp	/home/joaquim.junior/work/omics_course/analysis/CLEAN_READS_err_fastp/err011349_fastp.json

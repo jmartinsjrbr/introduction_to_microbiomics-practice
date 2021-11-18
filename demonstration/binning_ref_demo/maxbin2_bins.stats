@@ -1,0 +1,17 @@
+bin	completeness	contamination	GC	lineage	N50	size	binner
+bin.0	91.60	2.633	0.376	Clostridiales	5933	2942775	binsB
+bin.10	79.47	27.67	0.417	Selenomonadales	2767	3475742	binsB
+bin.11	85.66	96.69	0.437	Clostridiales	2434	4725214	binsB
+bin.12	77.91	55.48	0.394	Bacteria	2219	5564718	binsB
+bin.13	91.12	38.50	0.304	Archaea	5628	3621466	binsB
+bin.14	18.10	0.0	0.439	Bacteria	1716	1110469	binsB
+bin.15	57.10	9.328	0.267	Clostridiales	3229	1655418	binsB
+bin.1	75.33	0.459	0.291	Clostridiales	14149	1663189	binsB
+bin.2	85.89	5.454	0.476	Bacteroidales	10609	5369405	binsB
+bin.3	98.27	7.445	0.407	Bacteria	49264	2591242	binsB
+bin.4	66.96	21.61	0.572	Clostridiales	2106	2077948	binsB
+bin.5	83.34	37.36	0.479	Clostridiales	3083	2686450	binsB
+bin.6	46.50	14.33	0.533	Bacteria	2358	3447747	binsB
+bin.7	89.64	37.04	0.434	Bacteria	4657	6546449	binsB
+bin.8	26.09	5.485	0.354	Bacteria	3291	4216118	binsB
+bin.9	61.43	12.28	0.446	Bacteria	3234	3678669	binsB

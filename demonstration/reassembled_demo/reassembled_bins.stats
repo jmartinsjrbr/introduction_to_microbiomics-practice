@@ -1,0 +1,14 @@
+bin	completeness	contamination	GC	lineage	N50	size
+bin.10.orig	84.77	2.516	0.445	Clostridiales	2839	1452931
+bin.11.permissive	70.06	10.28	0.296	Bacteria	5049	1753228
+bin.12.strict	82.06	1.034	0.464	Bacteria	18867	4239208
+bin.13.strict	61.65	0.652	0.444	Bacteroidales	9734	1803127
+bin.15.permissive	55.27	8.885	0.572	Clostridiales	2144	2158760
+bin.1.strict	71.08	1.725	0.422	Selenomonadales	3881	1658693
+bin.2.orig	52.80	1.754	0.431	Bacteria	4709	2551706
+bin.4.strict	70.25	0.854	0.509	Clostridiales	3450	1600391
+bin.5.strict	99.32	1.006	0.406	Clostridiales	72398	2094670
+bin.6.strict	85.74	1.027	0.374	Clostridiales	7014	2072694
+bin.7.permissive	75.33	0.396	0.287	Clostridiales	23157	1463229
+bin.8.strict	56.14	7.894	0.267	Bacteria	3859	1213933
+bin.9.orig	98.4	1.6	0.311	Euryarchaeota	12258	1688675

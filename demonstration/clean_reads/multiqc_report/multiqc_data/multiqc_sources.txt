@@ -1,0 +1,2 @@
+Module	Section	Sample Name	Source
+fastp	all_sections	srr_fastp	/home/bioinformatica/omics_course/metaWRAP_analysis/1_FASTP/srr_fastp.json

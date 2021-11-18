@@ -1,0 +1,4 @@
+Sample	fastp_mqc-generalstats-fastp-pct_duplication	fastp_mqc-generalstats-fastp-after_filtering_q30_rate	fastp_mqc-generalstats-fastp-after_filtering_q30_bases	fastp_mqc-generalstats-fastp-after_filtering_gc_content	fastp_mqc-generalstats-fastp-pct_surviving	fastp_mqc-generalstats-fastp-pct_adapter
+err011347_fastp	0.511494	0.482621	379441995.0	0.394608	41.53673878291471	0.09961886060046728
+err011348_fastp	0.6242260000000001	0.540179	602283970.0	0.459581	69.46284690384091	0.06268033561451257
+err011349_fastp	0.42995300000000003	0.439286	214170255.0	0.363803	24.76502580079733	0.16442957697294355
