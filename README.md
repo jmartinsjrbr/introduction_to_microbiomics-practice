@@ -230,6 +230,35 @@ done;
  
 ```
 
+- GFF file resulted from prokka
+```
+NODE_314_length_15207_cov_0.831639	prokka	gene	168	1130	.	-	.	ID=JIEOEPFJ_00001_gene;Name=pfkA;gene=pfkA;locus_tag=JIEOEPFJ_00001
+NODE_314_length_15207_cov_0.831639	prokka	mRNA	168	1130	.	-	.	ID=JIEOEPFJ_00001_mRNA;Name=pfkA;gene=pfkA;locus_tag=JIEOEPFJ_00001
+NODE_314_length_15207_cov_0.831639	Prodigal:002006	CDS	168	1130	.	-	0	ID=JIEOEPFJ_00001;Parent=JIEOEPFJ_00001_gene,JIEOEPFJ_00001_mRNA;eC_number=2.7.1.11;Name=pfkA;gene=pfkA;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P00512;locus_tag=JIEOEPFJ_00001;product=ATP-dependent 6-phosphofructokinase
+NODE_314_length_15207_cov_0.831639	prokka	gene	1212	4718	.	-	.	ID=JIEOEPFJ_00002_gene;Name=dnaE;gene=dnaE;locus_tag=JIEOEPFJ_00002
+NODE_314_length_15207_cov_0.831639	prokka	mRNA	1212	4718	.	-	.	ID=JIEOEPFJ_00002_mRNA;Name=dnaE;gene=dnaE;locus_tag=JIEOEPFJ_00002
+NODE_314_length_15207_cov_0.831639	Prodigal:002006	CDS	1212	4718	.	-	0	ID=JIEOEPFJ_00002;Parent=JIEOEPFJ_00002_gene,JIEOEPFJ_00002_mRNA;eC_number=2.7.7.7;Name=dnaE;db_xref=COG:COG0587;gene=dnaE;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:Q9XDH5;locus_tag=JIEOEPFJ_00002;product=DNA polymerase III subunit alpha
+NODE_314_length_15207_cov_0.831639	prokka	gene	4735	6033	.	-	.	ID=JIEOEPFJ_00003_gene;Name=lysA;gene=lysA;locus_tag=JIEOEPFJ_00003
+NODE_314_length_15207_cov_0.831639	prokka	mRNA	4735	6033	.	-	.	ID=JIEOEPFJ_00003_mRNA;Name=lysA;gene=lysA;locus_tag=JIEOEPFJ_00003
+NODE_314_length_15207_cov_0.831639	Prodigal:002006	CDS	4735	6033	.	-	0	ID=JIEOEPFJ_00003;Parent=JIEOEPFJ_00003_gene,JIEOEPFJ_00003_mRNA;eC_number=4.1.1.20;Name=lysA;db_xref=COG:COG0019;gene=lysA;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P9WIU7;locus_tag=JIEOEPFJ_00003;product=Diaminopimelate decarboxylase
+NODE_314_length_15207_cov_0.831639	prokka	gene	6048	6626	.	-	.	ID=JIEOEPFJ_00004_gene;Name=engB;gene=engB;locus_tag=JIEOEPFJ_00004
+NODE_314_length_15207_cov_0.831639	prokka	mRNA	6048	6626	.	-	.	ID=JIEOEPFJ_00004_mRNA;Name=engB;gene=engB;locus_tag=JIEOEPFJ_00004
+NODE_314_length_15207_cov_0.831639	Prodigal:002006	CDS	6048	6626	.	-	0	ID=JIEOEPFJ_00004;Parent=JIEOEPFJ_00004_gene,JIEOEPFJ_00004_mRNA;Name=engB;db_xref=COG:COG0218;gene=engB;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P38424;locus_tag=JIEOEPFJ_00004;product=putative GTP-binding protein EngB
+NODE_314_length_15207_cov_0.831639	prokka	gene	6637	9054	.	-	.	ID=JIEOEPFJ_00005_gene;Name=lon1;gene=lon1;locus_tag=JIEOEPFJ_00005
+NODE_314_length_15207_cov_0.831639	prokka	mRNA	6637	9054	.	-	.	ID=JIEOEPFJ_00005_mRNA;Name=lon1;gene=lon1;locus_tag=JIEOEPFJ_00005
+NODE_314_length_15207_cov_0.831639	Prodigal:002006	CDS	6637	9054	.	-	0	ID=JIEOEPFJ_00005;Parent=JIEOEPFJ_00005_gene,JIEOEPFJ_00005_mRNA;eC_number=3.4.21.53;Name=lon1;db_xref=COG:COG0466;gene=lon1;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P37945;locus_tag=JIEOEPFJ_00005;product=Lon protease 1
+NODE_314_length_15207_cov_0.831639	prokka	gene	9302	10384	.	+	.	ID=JIEOEPFJ_00006_gene;Name=serC;gene=serC;locus_tag=JIEOEPFJ_00006
+NODE_314_length_15207_cov_0.831639	prokka	mRNA	9302	10384	.	+	.	ID=JIEOEPFJ_00006_mRNA;Name=serC;gene=serC;locus_tag=JIEOEPFJ_00006
+NODE_314_length_15207_cov_0.831639	Prodigal:002006	CDS	9302	10384	.	+	0	ID=JIEOEPFJ_00006;Parent=JIEOEPFJ_00006_gene,JIEOEPFJ_00006_mRNA;eC_number=2.6.1.52;Name=serC;db_xref=COG:COG1932;gene=serC;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:Q9HZ66;locus_tag=JIEOEPFJ_00006;product=Phosphoserine aminotransferase
+NODE_314_length_15207_cov_0.831639	prokka	gene	10402	11565	.	+	.	ID=JIEOEPFJ_00007_gene;Name=serA;gene=serA;locus_tag=JIEOEPFJ_00007
+NODE_314_length_15207_cov_0.831639	prokka	mRNA	10402	11565	.	+	.	ID=JIEOEPFJ_00007_mRNA;Name=serA;gene=serA;locus_tag=JIEOEPFJ_00007
+NODE_314_length_15207_cov_0.831639	Prodigal:002006	CDS	10402	11565	.	+	0	ID=JIEOEPFJ_00007;Parent=JIEOEPFJ_00007_gene,JIEOEPFJ_00007_mRNA;eC_number=1.1.1.95;Name=serA;db_xref=COG:COG0111;gene=serA;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P0A9T0;locus_tag=JIEOEPFJ_00007;product=D-3-phosphoglycerate dehydrogenase
+NODE_314_length_15207_cov_0.831639	prokka	gene	11643	12518	.	-	.	ID=JIEOEPFJ_00008_gene;Name=polC;gene=polC;locus_tag=JIEOEPFJ_00008
+NODE_314_length_15207_cov_0.831639	prokka	mRNA	11643	12518	.	-	.	ID=JIEOEPFJ_00008_mRNA;Name=polC;gene=polC;locus_tag=JIEOEPFJ_00008
+NODE_314_length_15207_cov_0.831639	Prodigal:002006	CDS	11643	12518	.	-	0	ID=JIEOEPFJ_00008;Parent=JIEOEPFJ_00008_gene,JIEOEPFJ_00008_mRNA;eC_number=2.7.7.7;Name=polC;gene=polC;inference=ab initio prediction:Prodigal
+```
+
+
 #### 9- Run dbcan to CAZyme prediction
 ```
 conda deactivate
@@ -242,4 +271,35 @@ for f in $(ls *_prokka_out/*.faa);do
  
 done
 
+```
+- run_dbcan results for CAZymes prediction by running hmmer algorithm
+```
+Gene ID	HMMER	Hotpep	DIAMOND	#ofTools
+DEBFJKAO_00183	GT66(22-798)	-	-	1
+DEBFJKAO_00449	GT4(188-336)	-	-	1
+DEBFJKAO_00524	GT2_Glycos_transf_2(5-159)	-	-	1
+DEBFJKAO_00527	GT81(19-243)	-	-	1
+DEBFJKAO_00531	GT2_Glycos_transf_2(12-150)	-	-	1
+DEBFJKAO_00695	GT2_Glycos_transf_2(6-137)	-	-	1
+DEBFJKAO_00699	GT2_Glycos_transf_2(5-124)	-	-	1
+DEBFJKAO_00753	AA3(2-398)	-	-	1
+DEBFJKAO_00956	GT2_Glycos_transf_2(6-127)	-	-	1
+DEBFJKAO_00959	GT2_Glycos_transf_2(139-270)	-	-	1
+DEBFJKAO_00960	GT2_Glycos_transf_2(6-130)	-	-	1
+DEBFJKAO_00961	GT2_Glycos_transf_2(5-146)	-	-	1
+DEBFJKAO_01087	GH109(128-271)	-	-	1
+DEBFJKAO_01112	GT2_Glycos_transf_2(4-111)	-	-	1
+DEBFJKAO_01121	GT2_Glycos_transf_2(6-139)	-	-	1
+DEBFJKAO_01165	GH109(2-149)	-	-	1
+DEBFJKAO_01277	CE1(11-261)	-	-	1
+DEBFJKAO_01363	GT2_Glycos_transf_2(7-178)+GT2_Glycos_transf_2(338-476)	-	-	1
+DEBFJKAO_01437	GT2_Glycos_transf_2(4-129)	-	-	1
+DEBFJKAO_01438	GT2_Glycos_transf_2(4-178)	-	-	1
+DEBFJKAO_01439	GT2_Glycos_transf_2(7-108)	-	-	1
+DEBFJKAO_01468	GT2_Glycos_transf_2(5-82)	-	-	1
+DEBFJKAO_01473	GT2_Glycos_transf_2(19-179)	-	-	1
+DEBFJKAO_01532	GT2_Glycos_transf_2(136-257)	-	-	1
+DEBFJKAO_01534	GT2_Glycos_transf_2(6-129)	-	-	1
+DEBFJKAO_01554	GH154(15-368)	-	-	1
+DEBFJKAO_01555	GH154(27-379)	-	-	1
 ```
