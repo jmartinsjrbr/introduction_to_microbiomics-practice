@@ -68,7 +68,7 @@ multiqc . -o ./multiqc_report
  - Multiqc plot made from fasp output (metawrap example data)
  ![fastp_filtered_reads_plot](https://user-images.githubusercontent.com/11639261/142344938-294bb639-03b5-4f9a-a459-890c8409c8b7.png)
 
-   - SRA example data (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420)
+ - SRA example data (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420)
    ![fastp_filtered_reads_plot (1)](https://user-images.githubusercontent.com/11639261/142345320-0fdafcd5-72dc-42d4-b978-035517093d4d.png)
 
 
@@ -133,6 +133,7 @@ bin.15	52.62	8.550	0.572	Clostridiales	1977	2116551	binsC
 
 
 - SRA example data (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420)
+  - Note: Here only one bin/MAG was recovered
 ```
  bin     completeness    contamination   GC      lineage N50     size    binner
  bin.1   52.44   11.26   0.532   Bacteria        1303    1111229 binsAB
@@ -166,6 +167,12 @@ bin.9.orig	98.4	1.6	0.311	Euryarchaeota	12258	1688675
 ```
 ![reassembled_bins](https://user-images.githubusercontent.com/11639261/142348161-a7cf60f1-09c0-4366-8440-39d2eb8ab752.png)
 
+- Binning reassemble: SRA example data (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420)
+```
+bin	completeness	contamination	GC	lineage	N50	size
+bin.1.permissive	53.46	10.56	0.533	Bacteria	1332	1130691
+```
+![reassembled_bins](https://user-images.githubusercontent.com/11639261/142383636-60ee6a9b-26fd-49de-a47a-3d77dd98d5bb.png)
 
 
 - **Download final bins**
@@ -178,7 +185,7 @@ cd bins_consolidated
 wget https://github.com/jmartinsjrbr/introduction_to_microbiomics-practice/blob/main/bin.1.permissive.fa.gz
 gunzip *.gz
 
-get https://github.com/jmartinsjrbr/introduction_to_microbiomics-practice/blob/main/binning_demo.tar.gz
+wget https://github.com/jmartinsjrbr/introduction_to_microbiomics-practice/blob/main/binning_demo.tar.gz
 tar -vzxf *.gz
 rm *.gz
 cd ..
