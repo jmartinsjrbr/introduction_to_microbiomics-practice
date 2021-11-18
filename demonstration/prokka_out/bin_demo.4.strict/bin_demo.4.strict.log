@@ -1,0 +1,260 @@
+[21:44:37] This is prokka 1.14.6
+[21:44:37] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[21:44:37] Homepage is https://github.com/tseemann/prokka
+[21:44:37] Local time is Wed Nov 17 21:44:37 2021
+[21:44:37] You are joaquim.junior
+[21:44:37] Operating system is linux
+[21:44:37] You have BioPerl 1.007002
+[21:44:37] System has 40 cores.
+[21:44:37] Will use maximum of 10 cores.
+[21:44:37] Annotating as >>> Bacteria <<<
+[21:44:37] Generating locus_tag from '/home/joaquim.junior/work/omics_course/analysis/bins_consolidated/bin_demo.4.strict.fa' contents.
+[21:44:37] Setting --locustag KNBIHPMI from MD5 47b2196267e18bd52525691522ec40dc
+[21:44:37] Creating new output folder: prokka_out/bin_demo.4.strict
+[21:44:37] Running: mkdir -p prokka_out\/bin_demo\.4\.strict
+[21:44:37] Using filename prefix: bin_demo.4.strict.XXX
+[21:44:37] Setting HMMER_NCPU=1
+[21:44:37] Writing log to: prokka_out/bin_demo.4.strict/bin_demo.4.strict.log
+[21:44:37] Command: /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/prokka --quiet --cpus 10 --outdir prokka_out/bin_demo.4.strict --prefix bin_demo.4.strict --addgenes --addmrna --kingdom Bacteria /home/joaquim.junior/work/omics_course/analysis/bins_consolidated/bin_demo.4.strict.fa
+[21:44:37] Appending to PATH: /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin
+[21:44:37] Looking for 'aragorn' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/aragorn
+[21:44:37] Determined aragorn version is 001002 from 'ARAGORN v1.2.38 Dean Laslett'
+[21:44:37] Looking for 'barrnap' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/barrnap
+[21:44:37] Determined barrnap version is 000009 from 'barrnap 0.9'
+[21:44:37] Looking for 'blastp' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/blastp
+[21:44:37] Determined blastp version is 002010 from 'blastp: 2.10.1+'
+[21:44:37] Looking for 'cmpress' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/cmpress
+[21:44:37] Determined cmpress version is 001001 from '# INFERNAL 1.1.3 (Nov 2019)'
+[21:44:37] Looking for 'cmscan' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/cmscan
+[21:44:37] Determined cmscan version is 001001 from '# INFERNAL 1.1.3 (Nov 2019)'
+[21:44:37] Looking for 'egrep' - found /usr/bin/egrep
+[21:44:37] Looking for 'find' - found /usr/bin/find
+[21:44:37] Looking for 'grep' - found /usr/bin/grep
+[21:44:37] Looking for 'hmmpress' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/hmmpress
+[21:44:37] Determined hmmpress version is 003003 from '# HMMER 3.3.2 (Nov 2020); http://hmmer.org/'
+[21:44:37] Looking for 'hmmscan' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/hmmscan
+[21:44:37] Determined hmmscan version is 003003 from '# HMMER 3.3.2 (Nov 2020); http://hmmer.org/'
+[21:44:37] Looking for 'java' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/java
+[21:44:37] Looking for 'makeblastdb' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/makeblastdb
+[21:44:37] Determined makeblastdb version is 002010 from 'makeblastdb: 2.10.1+'
+[21:44:37] Looking for 'minced' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/minced
+[21:44:37] Determined minced version is 004002 from 'minced 0.4.2'
+[21:44:37] Looking for 'parallel' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/parallel
+[21:44:38] Determined parallel version is 20201122 from 'GNU parallel 20201122'
+[21:44:38] Looking for 'prodigal' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/prodigal
+[21:44:38] Determined prodigal version is 002006 from 'Prodigal V2.6.3: February, 2016'
+[21:44:38] Looking for 'prokka-genbank_to_fasta_db' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/prokka-genbank_to_fasta_db
+[21:44:38] Looking for 'sed' - found /usr/bin/sed
+[21:44:38] Looking for 'signalp' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/bin/signalp
+[21:44:38] Determined signalp version is 005000 from '5.0 86_64'
+[21:44:38] Looking for 'tbl2asn' - found /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/bin/tbl2asn
+[21:44:38] Determined tbl2asn version is 025007 from 'tbl2asn 25.7   arguments:'
+[21:44:38] Using genetic code table 11.
+[21:44:38] Loading and checking input file: /home/joaquim.junior/work/omics_course/analysis/bins_consolidated/bin_demo.4.strict.fa
+[21:44:38] Wrote 535 contigs totalling 1600391 bp.
+[21:44:38] Predicting tRNAs and tmRNAs
+[21:44:38] Running: aragorn -l -gc11  -w prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.fna
+[21:44:38] 1 tRNA-Ser c[29097,29187] 36 (cga)
+[21:44:38] 1 tRNA-Ala c[5958,6033] 34 (ggc)
+[21:44:38] 1 tRNA-Pro c[7873,7949] 35 (cgg)
+[21:44:38] 1 tRNA-Arg c[3748,3824] 35 (ccg)
+[21:44:38] 2 tRNA-Thr [3976,4051] 34 (cgt)
+[21:44:38] 3 tRNA-Gly c[4158,4233] 34 (gcc)
+[21:44:38] 1 tRNA-Met [4545,4620] 34 (cat)
+[21:44:38] 2 tRNA-Thr [4632,4706] 33 (tgt)
+[21:44:38] 1 tmRNA c[1181,1529] 93,122 DNKTVLQAA*
+[21:44:38] 1 tRNA-Ser [2760,2848] 36 (tga)
+[21:44:38] 2 tRNA-Ser [2885,2975] 35 (gct)
+[21:44:38] 1 tRNA-Arg c[3164,3240] 35 (acg)
+[21:44:38] 1 tRNA-Ser [1891,1982] 36 (gga)
+[21:44:38] 1 tRNA-Pro c[28,103] 34 (tgg)
+[21:44:38] 1 tRNA-Leu [2491,2577] 35 (taa)
+[21:44:38] 1 tRNA-Arg c[2190,2264] 34 (cct)
+[21:44:38] 1 tRNA-Leu c[2058,2144] 35 (caa)
+[21:44:39] 1 tRNA-Cys [97,171] 33 (gca)
+[21:44:39] 1 tRNA-Val [36,111] 34 (gac)
+[21:44:39] 1 tRNA-Leu [1220,1302] 35 (tag)
+[21:44:39] 1 tRNA-Asp [203,279] 35 (gtc)
+[21:44:39] 2 tRNA-Thr [283,358] 34 (ggt)
+[21:44:39] 1 tRNA-Met c[97,173] 35 (cat)
+[21:44:39] Found 23 tRNAs
+[21:44:39] Predicting Ribosomal RNAs
+[21:44:39] Running Barrnap with 10 threads
+[21:44:39] 1 NODE_95_length_4085_cov_0.669479 2582 5S ribosomal RNA
+[21:44:39] Found 1 rRNAs
+[21:44:39] Skipping ncRNA search, enable with --rfam if desired.
+[21:44:39] Total of 23 tRNA + rRNA features
+[21:44:39] Searching for CRISPR repeats
+[21:44:40] Found 0 CRISPRs
+[21:44:40] Predicting coding sequences
+[21:44:40] Contigs total 1600391 bp, so using single mode
+[21:44:40] Running: prodigal -i prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.fna -c -m -g 11 -p single -f sco -q
+[21:44:43] Found 1600 CDS
+[21:44:43] Connecting features back to sequences
+[21:44:43] Not using genus-specific database. Try --usegenus to enable it.
+[21:44:43] Annotating CDS, please be patient.
+[21:44:43] Will use 10 CPUs for similarity searching.
+[21:44:43] There are still 1600 unannotated CDS left (started with 1600)
+[21:44:43] Will use blast to search against /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/db/kingdom/Bacteria/IS with 10 CPUs
+[21:44:43] Running: cat prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.IS\.tmp\.155487\.faa | parallel --gnu --plain -j 10 --block 19599 --recstart '>' --pipe blastp -query - -db /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.IS\.tmp\.155487\.blast 2> /dev/null
+[21:44:49] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.IS.tmp.155487.faa
+[21:44:49] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.IS.tmp.155487.blast
+[21:44:50] There are still 1600 unannotated CDS left (started with 1600)
+[21:44:50] Will use blast to search against /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/db/kingdom/Bacteria/AMR with 10 CPUs
+[21:44:50] Running: cat prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.AMR\.tmp\.155487\.faa | parallel --gnu --plain -j 10 --block 19599 --recstart '>' --pipe blastp -query - -db /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.AMR\.tmp\.155487\.blast 2> /dev/null
+[21:44:54] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.AMR.tmp.155487.faa
+[21:44:54] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.AMR.tmp.155487.blast
+[21:44:55] There are still 1600 unannotated CDS left (started with 1600)
+[21:44:55] Will use blast to search against /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/db/kingdom/Bacteria/sprot with 10 CPUs
+[21:44:55] Running: cat prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.sprot\.tmp\.155487\.faa | parallel --gnu --plain -j 10 --block 19599 --recstart '>' --pipe blastp -query - -db /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.sprot\.tmp\.155487\.blast 2> /dev/null
+[21:45:16] Modify product: Nucleoid-associated protein Cthe_2143 => Nucleoid-associated protein
+[21:45:16] Modify product: UPF0758 protein => hypothetical protein
+[21:45:16] Modify product: UPF0297 protein SP_0192 => hypothetical protein
+[21:45:16] Modify product: Putative aminotransferase MSMEG_6286/MSMEI_6121 => Putative aminotransferase/MSMEI_6121
+[21:45:16] Modify product: Probable FMN/FAD exporter YeeO => putative FMN/FAD exporter YeeO
+[21:45:16] Modify product: Uncharacterized protein YqgN => putative protein YqgN
+[21:45:16] Modify product: Putative phosphatase M6_Spy0533 => Putative phosphatase
+[21:45:16] Modify product: Probable manganese catalase => putative manganese catalase
+[21:45:16] Modify product: Probable transcriptional regulatory protein aq_1575 => putative transcriptional regulatory protein
+[21:45:16] Modify product: Uncharacterized symporter YjmB => putative symporter YjmB
+[21:45:16] Modify product: Probable multidrug resistance ABC transporter ATP-binding/permease protein YheH => putative multidrug resistance ABC transporter ATP-binding/permease protein YheH
+[21:45:17] Modify product: Uncharacterized ABC transporter ATP-binding protein Rv1273c => putative ABC transporter ATP-binding protein
+[21:45:17] Modify product: Probable dual-specificity RNA methyltransferase RlmN => putative dual-specificity RNA methyltransferase RlmN
+[21:45:17] Modify product: UPF0701 protein HI_0467 => hypothetical protein
+[21:45:17] Modify product: Uncharacterized spore protein YtfJ => putative spore protein YtfJ
+[21:45:17] Modify product: Probable capsular polysaccharide biosynthesis protein YwqC => putative capsular polysaccharide biosynthesis protein YwqC
+[21:45:17] Modify product: Probable manganese efflux pump MntP => putative manganese efflux pump MntP
+[21:45:17] Modify product: Probable FMN/FAD exporter YeeO => putative FMN/FAD exporter YeeO
+[21:45:17] Modify product: UPF0178 protein YaiI => hypothetical protein
+[21:45:17] Modify product: Probable FMN/FAD exporter YeeO => putative FMN/FAD exporter YeeO
+[21:45:17] Modify product: Bifunctional protein FolD => Bifunctional protein FolD protein
+[21:45:17] Modify product: Probable glucosamine-6-phosphate deaminase 2 => putative glucosamine-6-phosphate deaminase 2
+[21:45:17] Modify product: UPF0702 transmembrane protein YetF => hypothetical protein
+[21:45:17] Modify product: Putative aminotransferase MSMEG_6286/MSMEI_6121 => Putative aminotransferase/MSMEI_6121
+[21:45:17] Modify product: Uncharacterized glycosyltransferase YkoT => putative glycosyltransferase YkoT
+[21:45:17] Modify product: DegV domain-containing protein spr0652 => DegV domain-containing protein
+[21:45:17] Modify product: Protein TM_1420 => Protein
+[21:45:17] Modify product: Protein TM_1420 => Protein
+[21:45:17] Modify product: Uncharacterized ABC transporter ATP-binding protein YxlF => putative ABC transporter ATP-binding protein YxlF
+[21:45:17] Modify product: UPF0053 inner membrane protein YfjD => hypothetical protein
+[21:45:17] Modify product: UPF0210 protein SP_0239 => hypothetical protein
+[21:45:17] Modify product: Uncharacterized protein Spy1614 => putative protein
+[21:45:17] Modify product: Probable transcriptional regulatory protein TcrX => putative transcriptional regulatory protein TcrX
+[21:45:17] Modify product: Acetyltransferase SACOL1063 => Acetyltransferase
+[21:45:17] Modify product: Uncharacterized protein YqeN => putative protein YqeN
+[21:45:17] Modify product: Probable 6-phospho-beta-glucosidase => putative 6-phospho-beta-glucosidase
+[21:45:17] Modify product: DegV domain-containing protein MW1315 => DegV domain-containing protein
+[21:45:17] Modify product: UPF0371 protein DIP2346 => hypothetical protein
+[21:45:17] Modify product: Uncharacterized ABC transporter ATP-binding protein Rv1273c => putative ABC transporter ATP-binding protein
+[21:45:17] Modify product: UPF0237 protein SP_0238 => hypothetical protein
+[21:45:17] Modify product: Transcriptional regulator Rv3488 => Transcriptional regulator
+[21:45:17] Modify product: GTP cyclohydrolase 1 type 2 homolog => GTP cyclohydrolase 1 type 2 
+[21:45:17] Modify product: Uncharacterized protein Rv2581c => putative protein
+[21:45:17] Modify product: Uncharacterized protein HI_1162 => putative protein
+[21:45:17] Modify product: Uncharacterized HTH-type transcriptional regulator HI_0186 => putative HTH-type transcriptional regulator
+[21:45:17] Modify product: Uncharacterized symporter YjmB => putative symporter YjmB
+[21:45:17] Modify product: Putative multidrug export ATP-binding/permease protein SAV1866 => Putative multidrug export ATP-binding/permease protein
+[21:45:18] Modify product: Putative multidrug export ATP-binding/permease protein SAV1866 => Putative multidrug export ATP-binding/permease protein
+[21:45:18] Modify product: Uncharacterized ABC transporter ATP-binding protein YbiT => putative ABC transporter ATP-binding protein YbiT
+[21:45:18] Modify product: Probable GTP-binding protein EngB => putative GTP-binding protein EngB
+[21:45:18] Modify product: Probable M18 family aminopeptidase 1 => putative M18 family aminopeptidase 1
+[21:45:18] Cleaned 51 /product names
+[21:45:18] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.sprot.tmp.155487.faa
+[21:45:18] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.sprot.tmp.155487.blast
+[21:45:18] There are still 1034 unannotated CDS left (started with 1600)
+[21:45:18] Will use hmmer3 to search against /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/db/hmm/HAMAP.hmm with 10 CPUs
+[21:45:18] Running: cat prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.HAMAP\.hmm\.tmp\.155487\.faa | parallel --gnu --plain -j 10 --block 11995 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /opt/spack/opt/spack/linux-centos8-x86_64/gcc-9.3.0/anaconda3-2020.11-eofni6wqgiwzxofemlpw2qhivqi5lp4z/envs/prokka/db/hmm/HAMAP.hmm /dev/stdin > prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.HAMAP\.hmm\.tmp\.155487\.hmmer3 2> /dev/null
+[21:45:29] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.HAMAP.hmm.tmp.155487.faa
+[21:45:29] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.HAMAP.hmm.tmp.155487.hmmer3
+[21:45:29] Labelling remaining 916 proteins as 'hypothetical protein'
+[21:45:29] Possible /pseudo 'Xylulose kinase' at NODE_1_length_29488_cov_1.019400 position 9201
+[21:45:29] Possible /pseudo 'Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase' at NODE_4_length_18386_cov_0.939229 position 5409
+[21:45:29] Possible /pseudo 'Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase' at NODE_4_length_18386_cov_0.939229 position 10160
+[21:45:29] Possible /pseudo 'Serine/threonine-protein kinase PknD' at NODE_36_length_6454_cov_1.533677 position 4005
+[21:45:29] Possible /pseudo 'Protein' at NODE_171_length_2961_cov_0.440124 position 1244
+[21:45:29] Found 563 unique /gene codes.
+[21:45:29] Fixed 2 duplicate /gene - srrA_1 srrA_2
+[21:45:29] Fixed 2 duplicate /gene - moaA_1 moaA_2
+[21:45:29] Fixed 2 duplicate /gene - baiN_1 baiN_2
+[21:45:29] Fixed 2 duplicate /gene - axe2_1 axe2_2
+[21:45:29] Fixed 2 duplicate /gene - rsxB_1 rsxB_2
+[21:45:29] Fixed 2 duplicate /gene - guaA_1 guaA_2
+[21:45:29] Fixed 2 duplicate /gene - melB_1 melB_2
+[21:45:29] Fixed 2 duplicate /gene - ntpB_1 ntpB_2
+[21:45:29] Fixed 2 duplicate /gene - pyrE_1 pyrE_2
+[21:45:29] Fixed 2 duplicate /gene - pgsA_1 pgsA_2
+[21:45:29] Fixed 2 duplicate /gene - gldA_1 gldA_2
+[21:45:29] Fixed 3 duplicate /gene - tagU_1 tagU_2 tagU_3
+[21:45:29] Fixed 2 duplicate /gene - agaA_1 agaA_2
+[21:45:29] Fixed 4 duplicate /gene - xylB_1 xylB_2 xylB_3 xylB_4
+[21:45:29] Fixed 3 duplicate /gene - cpdA_1 cpdA_2 cpdA_3
+[21:45:29] Fixed 2 duplicate /gene - yjmB_1 yjmB_2
+[21:45:29] Fixed 2 duplicate /gene - mntR_1 mntR_2
+[21:45:29] Fixed 4 duplicate /gene - sasA_1 sasA_2 sasA_3 sasA_4
+[21:45:29] Fixed 3 duplicate /gene - yeeO_1 yeeO_2 yeeO_3
+[21:45:29] Fixed 2 duplicate /gene - dnaA_1 dnaA_2
+[21:45:29] Fixed 3 duplicate /gene - mltG_1 mltG_2 mltG_3
+[21:45:29] Fixed 2 duplicate /gene - polC_1 polC_2
+[21:45:29] Fixed 3 duplicate /gene - dapA_1 dapA_2 dapA_3
+[21:45:29] Fixed 2 duplicate /gene - epsF_1 epsF_2
+[21:45:29] Fixed 2 duplicate /gene - aptA_1 aptA_2
+[21:45:29] Fixed 2 duplicate /gene - lcfB_1 lcfB_2
+[21:45:29] Fixed 2 duplicate /gene - deoD_1 deoD_2
+[21:45:29] Fixed 5 duplicate /gene - xylP_1 xylP_2 xylP_3 xylP_4 xylP_5
+[21:45:29] Fixed 3 duplicate /gene - xylA_1 xylA_2 xylA_3
+[21:45:29] Fixed 2 duplicate /gene - algU_1 algU_2
+[21:45:29] Fixed 2 duplicate /gene - rluD_1 rluD_2
+[21:45:29] Fixed 2 duplicate /gene - mglA_1 mglA_2
+[21:45:29] Fixed 2 duplicate /gene - acsA_1 acsA_2
+[21:45:29] Fixed 2 duplicate /gene - paaK_1 paaK_2
+[21:45:29] Fixed 2 duplicate /gene - glnQ_1 glnQ_2
+[21:45:29] Fixed 2 duplicate /gene - acpP_1 acpP_2
+[21:45:29] Fixed 2 duplicate /gene - btsR_1 btsR_2
+[21:45:29] Fixed 2 duplicate /gene - rex_1 rex_2
+[21:45:29] Fixed 2 duplicate /gene - dapE_1 dapE_2
+[21:45:29] Fixed 2 duplicate /gene - prpC_1 prpC_2
+[21:45:29] Fixed 2 duplicate /gene - iolG_1 iolG_2
+[21:45:29] Fixed 2 duplicate /gene - xerC_1 xerC_2
+[21:45:29] Fixed 2 duplicate /gene - bglB_1 bglB_2
+[21:45:29] Fixed 2 duplicate /gene - tsaD_1 tsaD_2
+[21:45:29] Fixed 3 duplicate /gene - pknD_1 pknD_2 pknD_3
+[21:45:29] Fixed 2 duplicate /gene - ghrB_1 ghrB_2
+[21:45:29] Fixed 4 duplicate /gene - btuD_1 btuD_2 btuD_3 btuD_4
+[21:45:29] Fixed 2 duplicate /gene - atpA_1 atpA_2
+[21:45:29] Fixed 7 duplicate /gene - arnC_1 arnC_2 arnC_3 arnC_4 arnC_5 arnC_6 arnC_7
+[21:45:29] Fixed 2 duplicate /gene - aptB_1 aptB_2
+[21:45:29] Fixed 2 duplicate /gene - pnp_1 pnp_2
+[21:45:29] Fixed 51 colliding /gene names.
+[21:45:29] Adding /locus_tag identifiers
+[21:45:29] Assigned 1624 locus_tags to CDS and RNA features.
+[21:45:29] Writing outputs to prokka_out/bin_demo.4.strict/
+[21:45:31] Generating annotation statistics file
+[21:45:31] Generating Genbank and Sequin files
+[21:45:31] Running: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.14.6 from https://github.com/tseemann/prokka' -Z prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.err -i prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.fsa 2> /dev/null
+[21:45:38] Deleting unwanted file: prokka_out/bin_demo.4.strict/errorsummary.val
+[21:45:38] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.dr
+[21:45:38] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.fixedproducts
+[21:45:38] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.ecn
+[21:45:38] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.val
+[21:45:38] Repairing broken .GBK output that tbl2asn produces...
+[21:45:38] Running: sed 's/COORDINATES: profile/COORDINATES:profile/' < prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.gbf > prokka_out\/bin_demo\.4\.strict\/bin_demo\.4\.strict\.gbk
+[21:45:38] Deleting unwanted file: prokka_out/bin_demo.4.strict/bin_demo.4.strict.gbf
+[21:45:38] Output files:
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.log
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.fna
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.gff
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.faa
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.ffn
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.tbl
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.fsa
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.tsv
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.txt
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.err
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.sqn
+[21:45:38] prokka_out/bin_demo.4.strict/bin_demo.4.strict.gbk
+[21:45:38] Annotation finished successfully.
+[21:45:38] Walltime used: 1.02 minutes
+[21:45:38] If you use this result please cite the Prokka paper:
+[21:45:38] Seemann T (2014) Prokka: rapid prokaryotic genome annotation. Bioinformatics. 30(14):2068-9.
+[21:45:38] Type 'prokka --citation' for more details.
+[21:45:38] Share and enjoy!
