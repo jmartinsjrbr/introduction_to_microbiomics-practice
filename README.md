@@ -12,6 +12,10 @@ As an example, we will use a a public dataset from NCBI SRA (https://www.ncbi.nl
 (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420).
 
 
+-Note: **In addition, we will show as demonstration some results from megaHIT human gut survey retrieved from metaWRAP tutorial (https://github.com/bxlab/metaWRAP/blob/master/Usage_tutorial.md)**
+
+ ![Slide1](https://user-images.githubusercontent.com/11639261/142384996-21dfc2a3-a1d9-4152-8679-8e6c20a03ef4.jpg)
+
 #### 1- Download raw data and move into *DATA_FOLDER* 
 ```
 ANALYSIS_FOLDER=$HOME/omics_course/metaWRAP_analysis
@@ -23,7 +27,7 @@ test -d $ASSEMBLY_FOLDER || mkdir $ASSEMBLY_FOLDER
 
 cd $DATA_FOLDER 
 ```
-- Download fastq files to *$HOME/omics_course/metaWRAP_data* you have created in the steps above, by clinking in the links below:
+- Download fastq files to *$HOME/omics_course/metaWRAP_data* you have created in the steps above, by cliking in the links below:
   - https://filesender.rnp.br/download.php?token=b6fe375e-af11-4eb0-a76b-6bcd96c1f1b6&files_ids=114205 
   - https://filesender.rnp.br/download.php?token=b6fe375e-af11-4eb0-a76b-6bcd96c1f1b6&files_ids=114204
   
@@ -130,6 +134,7 @@ bin.15	52.62	8.550	0.572	Clostridiales	1977	2116551	binsC
 ```
 
 ![image](https://user-images.githubusercontent.com/11639261/142347793-08b91a49-607c-4a2a-850c-3dc3ad066177.png)
+- Note: *This plot compares metaWRAP performance vs. individual binning tools performance regarding both completeness and contamination*
 
 
 - SRA example data (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420)
