@@ -12,7 +12,6 @@ As an example, we will use a a public dataset from NCBI SRA (https://www.ncbi.nl
 (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420).
 
 
-To run the analysis you can simply run the following scripts inside the VM environmet you previously prepared as described in sections above.
 #### 1- Download raw data and move into *DATA_FOLDER* 
 ```
 ANALYSIS_FOLDER=$HOME/omics_course/metaWRAP_analysis
@@ -41,8 +40,15 @@ cd $ANALYSIS_FOLDER
 #metawrap read_qc -1 $DATA_FOLDER/ERR011347_1.fastq -2 $DATA_FOLDER/ERR011347_2.fastq -t 8 -o READ_QC/ERR011347
 #metawrap read_qc -1 $DATA_FOLDER/ERR011348_1.fastq -2 $DATA_FOLDER/ERR011348_2.fastq -t 8 -o READ_QC/ERR011348
 #metawrap read_qc -1 $DATA_FOLDER/ERR011349_1.fastq -2 $DATA_FOLDER/ERR011349_2.fastq -t 8 -o READ_QC/ERR011349
+```
+ - Pre-processing (metawrap example data)
+![image](https://user-images.githubusercontent.com/11639261/142344583-556e15e7-57ca-458e-8710-f3e073d45a85.png)
+
+ - Post-processing (metawrap example data)
+ ![image](https://user-images.githubusercontent.com/11639261/142344704-5595768b-6c0a-42c0-a92b-f972b3073a6a.png)
 
 
+```
 ##Alternatively, we will run fastp for practice purposes
 CLEAN_READS=$ANALYSIS_FOLDER/1_FASTP
 test -d $CLEAN_READS || mkdir $CLEAN_READS
@@ -59,6 +65,12 @@ cd $CLEAN_READS
 multiqc . -o ./multiqc_report
 
 ```
+ - Multiqc plot made from fasp output (metawrap example data)
+ ![fastp_filtered_reads_plot](https://user-images.githubusercontent.com/11639261/142344938-294bb639-03b5-4f9a-a459-890c8409c8b7.png)
+
+   - SRA example data (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420)
+   ![fastp_filtered_reads_plot (1)](https://user-images.githubusercontent.com/11639261/142345320-0fdafcd5-72dc-42d4-b978-035517093d4d.png)
+
 
 #### 3- Run metaWRAP-ASSEMBLY with metaspades 
 **WILL NOT BE RUN DURING DEMONSTRATION DUE TO HIGH COMPUTATIONAL COST FOR VM**
@@ -68,13 +80,18 @@ cat CLEAN_READS/srr*_2.CLEAN.fastq > CLEAN_READS/ALL_READS_2.fastq
 
 #metawrap assembly -1 $CLEAN_READS/ALL_READS_1.fastq -2 $CLEAN_READS/ALL_READS_2.fastq -m 300 -t 16 --metaspades -o ASSEMBLY_srr
 ```
-- **Download the final assembly file available at:** 
+- **Download the final assembly file** 
 ```
 cd $ASSEMBLY_FOLDER
 wget https://github.com/jmartinsjrbr/introduction_to_microbiomics-practice/blob/main/final_assembly.fasta.gz
 gunzip *.gz
 
 ```
+- Assembly metrics (metawrap example data)
+![Slide2](https://user-images.githubusercontent.com/11639261/142346482-924ecde4-6565-45e5-8229-333783e470cf.jpg)
+
+- SRA example data (https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR16888420)
+![Slide1](https://user-images.githubusercontent.com/11639261/142346791-34c41927-b3d6-4038-b561-b8e364909ae5.jpg)
 
 #### 4- Run metaWRAP-BINNING combining metabat2, maxbin2 and concoct 
 ```
