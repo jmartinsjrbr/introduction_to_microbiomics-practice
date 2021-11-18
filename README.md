@@ -274,7 +274,7 @@ done
 ```
 - run_dbcan results for CAZymes prediction by running hmmer algorithm
 ```
-Gene ID	HMMER	Hotpep	DIAMOND	#ofTools
+Gene  ID  HMMER Hotpep  DIAMOND #ofTools
 DEBFJKAO_00183	GT66(22-798)	-	-	1
 DEBFJKAO_00449	GT4(188-336)	-	-	1
 DEBFJKAO_00524	GT2_Glycos_transf_2(5-159)	-	-	1
